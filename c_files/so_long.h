@@ -72,8 +72,6 @@ typedef struct s_game
 	int			size_y;
 	int			map_width;
 	int			map_height;
-	int			exit_x_val;
-	int			exit_y_val;
 	t_player	player;
 }				t_game;
 
