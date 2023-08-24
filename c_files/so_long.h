@@ -165,6 +165,7 @@ int		ft_strlen(const char *str);
 
 //window.c
 int		destroy_window(t_game *game);
+int		file_check(char *arg);
 void	ft_window_size(t_game *game, char *arg);
 
 #endif

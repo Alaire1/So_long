@@ -6,7 +6,7 @@
 /*   By: akaraban <akaraban@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 00:13:28 by akaraban          #+#    #+#             */
-/*   Updated: 2023/08/23 17:16:04 by akaraban         ###   ########.fr       */
+/*   Updated: 2023/08/24 14:26:07 by akaraban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	flood(t_game *game, t_map *copy, int x, int y)
 	if (copy->map[y][x] == 'E')
 	{
 		copy->exit++;
-		return;
+		return ;
 	}
 	if (game->map[y][x] == 'C')
 		copy->collectibles++;
@@ -62,24 +62,10 @@ void	preparing_map_copy(t_game *game)
 	if_map_too_big(game);
 	find_player_pos(game);
 	map_copying(game, copy);
-	int i = 0;
-	while (copy->map[i])
-	{
-		printf("%s\n", copy->map[i]);
-		i++;
-	}
 	copy->collectibles = 0;
 	copy->exit = 0;
 	flood(game, copy, game->player.start_x, game->player.start_y);
-	i = 0;
-	printf("copy\n");
-	while (copy->map[i])
-	{
-		printf("%s\n", copy->map[i]);
-		i++;
-	}
-	printf("%i", copy->exit);
-	if (copy->collectibles != game->all_coins || copy->exit < 1)
+	if (copy->collectibles != game->all_coins || copy->exit < 1) 
 		error_message(RED"Error: Map not possible to play with \n"RESET, game);
 	ft_free_map_copy(copy);
 }

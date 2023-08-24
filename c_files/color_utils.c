@@ -6,7 +6,7 @@
 /*   By: akaraban <akaraban@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 04:55:25 by akaraban          #+#    #+#             */
-/*   Updated: 2023/06/06 02:42:58 by akaraban         ###   ########.fr       */
+/*   Updated: 2023/08/24 14:26:55 by akaraban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*ft_strcat(char *dest, char *src)
 	{
 		dest[i] = src [j];
 		i++;
-			j++;
+		j++;
 	}
 	dest[i] = '\0';
 	return (dest);

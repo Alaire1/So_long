@@ -6,7 +6,7 @@
 /*   By: akaraban <akaraban@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 01:06:06 by akaraban          #+#    #+#             */
-/*   Updated: 2023/06/06 04:34:28 by akaraban         ###   ########.fr       */
+/*   Updated: 2023/08/24 14:26:37 by akaraban         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s)
 		return (NULL);
 	ptr = (char *)s;
 	while (ptr[len] != '\0')
-	len++;
+		len++;
 	dest = (char *)malloc(len + 1);
 	if (!(dest))
 		return (NULL);
